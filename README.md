@@ -50,59 +50,40 @@ Copy code
 npm start
 Use an API development tool like Postman or cURL to interact with the API.
 
-Register a New User
+1. **Register a New User**
 
-Endpoint: POST /api/auth/register
-Payload: { "email": "user@example.com", "password": "mypassword" }
-Response: {"message": "User registered successfully"}
-Login
+   Endpoint: POST /api/auth/register
+   Payload: { "email": "user@example.com", "password": "mypassword" }
+   Response: {"message": "User registered successfully"}
 
-Endpoint: POST /api/auth/login
-Payload: { "email": "user@example.com", "password": "mypassword" }
-Response: {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzA0NjQ2OTEsImV4cCI6MTYzMDQ2NTA5MX0.JT5otYqfdNh"
-Create a New Task
+2. **Login**
 
-Endpoint: POST /api/tasks
-Payload: { "title": "Task 1", "description": "Description of Task 1" }
-Response: {"message": "Task created successfully", "task": { "id": "1", "title": "Task 1", "description": "Description of Task 1", "completed": false, "userId": "12345" }}
-Get Tasks for a User
+   Endpoint: POST /api/auth/login
+   Payload: { "email": "user@example.com", "password": "mypassword" }
+   Response: {"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZXhhbXBsZS5jb20iLCJpYXQiOjE2MzA0NjQ2OTEsImV4cCI6MTYzMDQ2NTA5MX0.JT5otYqfdNh"
 
-Endpoint: GET /api/tasks
-Response: {"tasks": [{ "id": "1", "title": "Task 1", "description": "Description of Task 1", "completed": false, "userId": "12345" }]}
-Update a Task
+3. **Create a New Task**
 
-Endpoint: PUT /api/tasks/:taskId
-Payload: { "title": "Updated Task 1", "description": "Updated description" }
-Response: {"message": "Task updated successfully", "task": { "id": "1", "title": "Updated Task 1", "description": "Updated description", "completed": false, "userId": "12345" }}
-Delete a Task
+   Endpoint: POST /api/tasks
+   Payload: { "title": "Task 1", "description": "Description of Task 1" }
+   Response: {"message": "Task created successfully", "task": { "id": "1", "title": "Task 1", "description": "Description of Task 1", "completed": false, "userId": "12345" }}
 
-Endpoint: DELETE /api/tasks/:taskId
-Response: {"message": "Task deleted successfully"}
-Mark a Task as Completed
+4. **Get Tasks for a User**
 
-Endpoint: PUT /api/tasks/:taskId/complete
-Response: {"message": "Task marked as completed", "task": { "id": "1", "title": "Updated Task 1", "description": "Updated description", "completed": true, "userId": "12345" }}
-Mark a Task as Pending
+   Endpoint: GET /api/tasks
+   Response: {"tasks": [{ "id": "1", "title": "Task 1", "description": "Description of Task 1", "completed": false, "userId": "12345" }]}
 
-Endpoint: PUT /api/tasks/:taskId/pending
-Response: {"message": "Task marked as pending", "task": { "id": "1", "title": "Updated Task 1", "description": "Updated description", "completed": false, "userId": "12345" }}
-Sort Tasks by Due Date
+5. **Update a Task**
 
-Endpoint: GET /api/tasks?sort=dueDate
-Response: {"tasks": [...]}
-Filter Completed Tasks
+   Endpoint: PUT /api/tasks/:taskId
+   Payload: { "title": "Updated Task 1", "description": "Updated description" }
+   Response: {"message": "Task updated successfully", "task": { "id": "1", "title": "Updated Task 1", "description": "Updated description", "completed": false, "userId": "12345" }}
 
-Endpoint: GET /api/tasks?filter=completed
-Response: {"tasks": [...]}
-Filter Tasks by Priority
+6. **Delete a Task**
 
-Endpoint: GET /api/tasks?filter=priority
-Response: {"tasks": [...]}
-Filter Tasks by Status
-
-Endpoint: GET /api/tasks?filter=status
-Response: {"tasks": [...]}
-Contributing
+   Endpoint: DELETE /api/tasks/:taskId
+   Response: {"message": "Task deleted successfully"}
+  
 
 ## Getting Started
 
@@ -118,4 +99,4 @@ Before running the project, make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/todo-api.git
+   git clone https://github.com/sayed-soeb/todoApi.git
